@@ -11,6 +11,7 @@
 			<th>Zipcode</th>
 			<th>City</th>
 			<th>Books</th>
+			<th>option</th>
 		</tr>
 
 		<?php foreach ($authors as $author) { ?>
@@ -20,6 +21,7 @@
 			<td><?=$author['author_zipcode']?></td>
 			<td><?=$author['author_city']?></td>
 			<td><a href="<?= URL . "books/read/" . $author['author_id']; ?>">Show</a></td>
+			<td><a href="<?= URL . "authors/read/" . $author['author_id']; ?>">INFO</a></td>
 		</tr>
 		<?php } ?>
 	</table>

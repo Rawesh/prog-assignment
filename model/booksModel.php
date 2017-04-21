@@ -37,9 +37,9 @@ function getBook($id)
 {
 	$db = openDatabaseConnection();
 
-	$sql = "SELECT * FROM books WHERE author_id = :author_id" ;
+	$sql = "SELECT * FROM books WHERE book_id = :book_id" ;
 	$query = $db->prepare($sql);
-	$query->execute(array(":author_id" => $id));
+	$query->execute(array(":book_id" => $id));
 
 	return $query->fetch();
 
@@ -98,14 +98,14 @@ function editBook()
 
 	$sql = "UPDATE books
 			SET book_title = :title, book_publisher = :publisher, book_summary = :summary
-			WHERE author_id = :author_id";
+			WHERE book_id = :book_id";
 	
 	$query = $db->prepare($sql);
 	$query->execute(array(
 			":title" => $_POST['book_title'],
 			":publisher" => $_POST['book_publisher'],
 			":summary" => $_POST['book_summary'],
-			":author_id" => $_POST['author_id']
+			":book_id" => $_POST['book_id']
 			));
 
 	$db = null;

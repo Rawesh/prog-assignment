@@ -8,5 +8,12 @@ function index()
 		));
 }
 
+function read($id)
+{
+	render("authors/read", array("authors" => getAuthor($id)));
+}
+
+
+
 
 

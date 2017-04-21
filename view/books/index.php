@@ -19,14 +19,14 @@
 		</tr>
 
 		<?php foreach ($books as $book) { ?>
-		<?php $book['book_id'] ?>
+		
 		<tr>	
 			<td nowrap="true"><?=$book['book_title']?></td>
 			<td nowrap="true"><?=$book['book_publisher']?></td>
 			<td><?=$book['book_summary']?></td>
 			<td><?=$book['author_name']?></td>
 			<td><a href="<?= URL?>books/read/<?=$book['author_id']?>">INFO</a></td>
-			<td><a href="<?= URL?>books/edit/<?=$book['book_id']?>">EDIT</a></td>
+			<td><a href="<?= URL?>books/edit/<?=$book['book_id']?>/<?=$book['author_id']?>">EDIT</a></td>
 			<td><a href="<?= URL?>books/delete/<?=$book['author_id']?>">DELETE</a></td>
 		</tr>
 		<?php } ?>

@@ -5,8 +5,7 @@ require(ROOT . "model/authorsModel.php");
 
 function index()
 {
-	render("books/index", array("books" => getAllbooks()
-		));
+	render("books/index", array("books" => getAllbooks()));
 }
 
 function read($id)

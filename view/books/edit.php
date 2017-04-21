@@ -1,6 +1,8 @@
 <h1>EditBook</h1>
 
-
+<?php foreach ($authors as $author) { ?>
+<?php print_r($author['author_name']) ?>
+<?php } ?>
 
 <form action="<?=URL?>books/editSave" method="post">
 <input type="hidden" name="book_id" value="<?=$books['book_id']?>">
@@ -14,7 +16,7 @@
 <br>
 <label>Summary</label>
 <br>
-<input type="text" name="book_summary" value="<?=$books['book_summary']?>">
+ <textarea name="book_summary"><?=$books['book_summary']?></textarea>
 <br>
 <select name="author_id">
 	<?php foreach ($authors as $author) { ?>
