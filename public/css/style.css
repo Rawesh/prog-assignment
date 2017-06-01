@@ -28,6 +28,12 @@ body
 	background-position: center;
 	background-repeat: repeat-y;
 }
+
+nav	
+{
+	margin: 5px;
+}
+
 td
 {
 	text-align: center;

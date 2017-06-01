@@ -4,6 +4,9 @@
 	<header>
 		<h1>Authors</h1>
 	</header>
+
+	<nav><a href="<?= URL?> books/index">Show all Books</a></nav>
+
 	<table>
 		<tr>
 			<th>Name</th>
